@@ -1,0 +1,98 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and overall styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+/* Flexbox Layout for Main Content */
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.left-column, .right-column {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 48%; /* Adjust width for flexibility */
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* Mobile-specific Styles (Max width 600px) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column, .right-column {
+    width: 90%; /* Full width for mobile screens */
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablet-specific Styles (Max width 768px) */
+@media (max-width: 768px) {
+  .left-column, .right-column {
+    width: 45%;
+  }
+}
+
+/* Desktop-specific Styles (Min width 1024px) */
+@media (min-width: 1024px) {
+  main {
+    margin: 40px;
+  }
+}
